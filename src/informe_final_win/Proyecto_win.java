@@ -309,7 +309,7 @@ public class Proyecto_win extends javax.swing.JFrame {
            jtxtMontTotal.setText(Double.toString(cn.CalcularMontoTotal()));
         }
     }//GEN-LAST:event_jbtnMostrarActionPerformed
-
+// xD
     private void jcbxPlanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jcbxPlanActionPerformed
 
     }//GEN-LAST:event_jcbxPlanActionPerformed
