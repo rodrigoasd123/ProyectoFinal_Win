@@ -281,8 +281,8 @@ public class Proyecto_win extends javax.swing.JFrame {
         String tipoPlan = jcbxPlan.getSelectedItem().toString();
         cf = new ClienteFiel(Nombres, Apellidos, dni, distrito, direccion, tipocliente, tipoPlan);
         cn = new ClienteNuevo(Nombres, Apellidos, dni, distrito, direccion, tipocliente, tipoPlan);
-        if(Nombres.equals("") && Apellidos.equals("") && direccion.equals("") && dni.equals("") && tipocliente.equals("--SELECCIONE EL TIPO DE CLIENTE--") 
-           && distrito.equals("--SELECCIONE SU DISTRITO--") && tipoPlan.equals("--SELECCIONE EL PLAN--")){
+        if(Nombres.equals("") || Apellidos.equals("") || direccion.equals("") || dni.equals("") || tipocliente.equals("--SELECCIONE EL TIPO DE CLIENTE--") 
+           || distrito.equals("--SELECCIONE SU DISTRITO--") || tipoPlan.equals("--SELECCIONE EL PLAN--")){
            JOptionPane.showMessageDialog(null, "Error, Ingrese los Datos Completos");
         }else{
            if(tipocliente.equals("Fiel")){
