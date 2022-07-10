@@ -13,7 +13,8 @@
     */
     
     public abstract class Cliente implements Clientela{
-        
+        String Nombres;
+        String Apellidos;
         
         
         @Override
