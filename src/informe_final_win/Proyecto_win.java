@@ -14,14 +14,12 @@ import javax.swing.JOptionPane;
     */
 
 public class Proyecto_win extends javax.swing.JFrame {
-    //Aca se inicializan las clases y algunos objetos que usan librerias
     ClienteFiel cf;
     ClienteNuevo cn;
     DecimalFormat df;
     
     public Proyecto_win() {
         initComponents();
-        //Inicializador del formulario
         this.setTitle("Formulario de Planes de Fibra Óptica WIN");
         rsscalelabel.RSScaleLabel.setScaleLabel(jlblImagen, "src/Imagenes/win.png");
         jtxtAPlanes.setText(PlanesWIN()); 
@@ -273,59 +271,59 @@ public class Proyecto_win extends javax.swing.JFrame {
 
     }//GEN-LAST:event_jtxtCVVMasterActionPerformed
 
-    //Boton para Mostrar (Su objetivo es mostrar los datos de la boleta) y tambien los jtxt MontoTotal y MontoTransacciön 
     private void jbtnMostrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnMostrarActionPerformed
-        String Nombres=jtxtNombres.getText();
-        String Apellidos=jtxtApellidos.getText();
-        String direccion=jcbxDireccion.getText();
-        String dni=jtxtDNI.getText();
-        String tipocliente=jcbxTipoCliente.getSelectedItem().toString();
-        String distrito=jtxtDistrito.getSelectedItem().toString();
-        String tipoPlan=jcbxPlan.getSelectedItem().toString();
-        //Corregir lo que se muestra en la boleta
+        String Nombres = jtxtNombres.getText();
+        String Apellidos = jtxtApellidos.getText();
+        String direccion = jcbxDireccion.getText();
+        String dni = jtxtDNI.getText();
+        String tipocliente = jcbxTipoCliente.getSelectedItem().toString();
+        String distrito = jtxtDistrito.getSelectedItem().toString();
+        String tipoPlan = jcbxPlan.getSelectedItem().toString();
         cf = new ClienteFiel(Nombres, Apellidos, dni, distrito, direccion, tipocliente, tipoPlan);
         cn = new ClienteNuevo(Nombres, Apellidos, dni, distrito, direccion, tipocliente, tipoPlan);
-        if(tipocliente.equals("Fiel")){
-           jtxtABoleta.append("Boleta de Venta:\n------------------------------------------\nNombres: "+cf.Nombres+"\n");
-        jtxtABoleta.append("Apellidos: "+cf.Apellidos+"\n");
-        jtxtABoleta.append("DNI: "+cf.dni+"\n");
-        jtxtABoleta.append("Distrito: "+cf.distrito+"\n");
-        jtxtABoleta.append("Dirección: "+cf.direccion+"\n");
-        jtxtABoleta.append("Tipo de Cliente: "+cf.tipocliente+"\n");
-        jtxtABoleta.append("Plan: "+cf.tipoPlan+"\n------------------------------------------\n");
-        jtxtABoleta.append("Monto por instalación: S/ "+cf.CalcularMontoInstalacion()+"\n");
-        jtxtABoleta.append("Monto Total a Pagar: S/ "+cf.CalcularMontoTotal()+"\n");
-           jtxtMontIns.setText(Double.toString(cf.CalcularMontoInstalacion()));
-           jtxtMontTotal.setText(Double.toString(cf.CalcularMontoTotal()));
+        if(Nombres.equals("") && Apellidos.equals("") && direccion.equals("") && dni.equals("") && tipocliente.equals("--SELECCIONE EL TIPO DE CLIENTE--") 
+           && distrito..equals("--SELECCIONE SU DISTRITO--") && tipoPlan.equals("--SELECCIONE EL PLAN--")){
+           JOptionPane.showMessageDialog(null, "Error, Ingrese los Datos Completos");
+        }else{
+           if(tipocliente.equals("Fiel")){
+              jtxtABoleta.append("Boleta de Venta:\n------------------------------------------\nNombres: "+cf.Nombres+"\n");
+              jtxtABoleta.append("Apellidos: "+cf.Apellidos+"\n");
+              jtxtABoleta.append("DNI: "+cf.dni+"\n");
+              jtxtABoleta.append("Distrito: "+cf.distrito+"\n");
+              jtxtABoleta.append("Dirección: "+cf.direccion+"\n");
+              jtxtABoleta.append("Tipo de Cliente: "+cf.tipocliente+"\n");
+              jtxtABoleta.append("Plan: "+cf.tipoPlan+"\n------------------------------------------\n");
+              jtxtABoleta.append("Monto por instalación: S/ "+cf.CalcularMontoInstalacion()+"\n");
+              jtxtABoleta.append("Monto Total a Pagar: S/ "+cf.CalcularMontoTotal()+"\n");
+              jtxtMontIns.setText("S/"+Double.toString(cf.CalcularMontoInstalacion()));
+              jtxtMontTotal.setText("S/"+Double.toString(cf.CalcularMontoTotal()));
+           }
+           if(tipocliente.equals("Nuevo")){
+              jtxtABoleta.append("Boleta de Venta:\n------------------------------------------\nNombres: "+cf.Nombres+"\n");
+              jtxtABoleta.append("Apellidos: "+cn.Apellidos+"\n");
+              jtxtABoleta.append("DNI: "+cn.dni+"\n");
+              jtxtABoleta.append("Distrito: "+cn.distrito+"\n");
+              jtxtABoleta.append("Dirección: "+cn.direccion+"\n");
+              jtxtABoleta.append("Tipo de Cliente: "+cn.tipocliente+"\n");
+              jtxtABoleta.append("Plan: "+cn.tipoPlan+"\n------------------------------------------\n");
+              jtxtABoleta.append("Monto por instalación: S/ "+cn.CalcularMontoInstalacion()+"\n");
+              jtxtABoleta.append("Monto Total a Pagar: S/ "+cn.CalcularMontoTotal()+"\n"); 
+              jtxtMontIns.setText("S/"+Double.toString(cn.CalcularMontoInstalacion()));
+              jtxtMontTotal.setText("S/"+Double.toString(cn.CalcularMontoTotal()));
+           }
+           if(tipocliente.equals("--SELECCIONE EL TIPO DE CLIENTE--")){
+              JOptionPane.showMessageDialog(null, "Error, Seleccione el Tipo de Cliente");
+           }
         }
-        if(tipocliente.equals("Nuevo")){
-           jtxtABoleta.append("Boleta de Venta:\n------------------------------------------\nNombres: "+cf.Nombres+"\n");
-        jtxtABoleta.append("Apellidos: "+cn.Apellidos+"\n");
-        jtxtABoleta.append("DNI: "+cn.dni+"\n");
-        jtxtABoleta.append("Distrito: "+cn.distrito+"\n");
-        jtxtABoleta.append("Dirección: "+cn.direccion+"\n");
-        jtxtABoleta.append("Tipo de Cliente: "+cn.tipocliente+"\n");
-        jtxtABoleta.append("Plan: "+cn.tipoPlan+"\n------------------------------------------\n");
-        jtxtABoleta.append("Monto por instalación: S/ "+cn.CalcularMontoInstalacion()+"\n");
-        jtxtABoleta.append("Monto Total a Pagar: S/ "+cn.CalcularMontoTotal()+"\n"); 
-           jtxtMontIns.setText(Double.toString(cn.CalcularMontoInstalacion()));
-           jtxtMontTotal.setText(Double.toString(cn.CalcularMontoTotal()));
-        }
-         if(tipocliente.equals("--SELECCIONE EL TIPO DE CLIENTE--")){
-           JOptionPane.showMessageDialog(null, "Error, Seleccione el Tipo de Cliente");
+
     }//GEN-LAST:event_jbtnMostrarActionPerformed
-// xD
-    }
+    
     private void jcbxPlanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jcbxPlanActionPerformed
 
     }//GEN-LAST:event_jcbxPlanActionPerformed
 
-    //Boton Confirmar contrato su objetivo es que una vez se mostraron los datos de la boleta se debe mostrar
-    //un mensaje que diga que se confirmo el pago
     private void jbtnConfirmarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnConfirmarActionPerformed
-        //Comprobar que se ha ingresado los datos de la tarjeta, si es asi mostrar ese mensaje
-        
-               String numtarjetavisa = jtxtNumTarjetaVisa.getText();
+        String numtarjetavisa = jtxtNumTarjetaVisa.getText();
         String fechadecaduvisa = jtxtFechaCaduVisa.getText();
         String cvvvisa = jtxtCVVVisa.getText();
         String numtarjetamaster = jtxtNumTarjetaMaster.getText();
@@ -339,7 +337,6 @@ public class Proyecto_win extends javax.swing.JFrame {
         }       
     }//GEN-LAST:event_jbtnConfirmarActionPerformed
 
-    //Boton Cerrar su objetivo es cerrar el formulario 
     private void jbtnCerrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnCerrarActionPerformed
         System.exit(0);      
     }//GEN-LAST:event_jbtnCerrarActionPerformed
@@ -364,8 +361,6 @@ public class Proyecto_win extends javax.swing.JFrame {
  
     }//GEN-LAST:event_jtxtCVVVisaActionPerformed
 
-    //Boton Ingresar nuevos datos su objetivo es borrar los datos de entrada para ingresar nuevos datos, requestfocus() 
-    //a Nombres
     private void jbtnIngresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnIngresarActionPerformed
         jcbxPlan.setSelectedIndex(0);
         jcbxTipoCliente.setSelectedIndex(0);
@@ -390,12 +385,6 @@ public class Proyecto_win extends javax.swing.JFrame {
         return "Planes de Fibra Óptica WIN : \n100 mbps - S/79 \n200 mbps - S/99 \n600 mbps - S/169 + Un Mesh"
                 + "\n600 mbps Plus - S/259 + Doble Mesh y Antivirus Gratis \n1000 mbps - S/459";   
     }
-    
-    //Fabrizio si quieres puedes agregar metodos (de tipo función o procedimientos)aca, asi como ese metodo funcion de 
-    //arriba
-    
-    
-    //DE AQUI PARA ABAJO NO EDITAR
     
     /**
      * @param args the command line arguments
