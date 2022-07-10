@@ -390,11 +390,11 @@
                 <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
                   <StringArray count="6">
                     <StringItem index="0" value="--SELECCIONE EL PLAN--"/>
-                    <StringItem index="1" value="100MB"/>
-                    <StringItem index="2" value="200MB"/>
-                    <StringItem index="3" value="600MB"/>
-                    <StringItem index="4" value="600MB PLUS"/>
-                    <StringItem index="5" value="1000MB"/>
+                    <StringItem index="1" value="100 mbps"/>
+                    <StringItem index="2" value="200 mbps"/>
+                    <StringItem index="3" value="600 mbps"/>
+                    <StringItem index="4" value="600 mbps plus"/>
+                    <StringItem index="5" value="1000 mbps"/>
                   </StringArray>
                 </Property>
               </Properties>

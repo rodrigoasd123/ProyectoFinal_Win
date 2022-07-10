@@ -29,7 +29,7 @@ public class ClienteNuevo extends Cliente{
            return 99;
         if(tipoPlan.equals("600 mbps"))
            return 169;
-        if(tipoPlan.equals("600 mbps Plus"))
+        if(tipoPlan.equals("600 mbps plus"))
            return 259;
         if(tipoPlan.equals("1000 mbps"))
            return 459;

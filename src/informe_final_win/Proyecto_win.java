@@ -70,11 +70,11 @@ public class Proyecto_win extends javax.swing.JFrame {
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jtxtMontTotal.setFont(new java.awt.Font("Arial", 0, 11)); // NOI18N
-        jtxtMontTotal.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "MONTO TOTAL A PAGAR", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial", 0, 11))); // NOI18N
+        jtxtMontTotal.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(41, 43, 45)), "MONTO TOTAL A PAGAR", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial", 0, 11))); // NOI18N
         jPanel1.add(jtxtMontTotal, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 450, 250, 60));
 
         jtxtMontIns.setFont(new java.awt.Font("Arial", 0, 11)); // NOI18N
-        jtxtMontIns.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "MONTO POR INSTALACIÓN", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial", 0, 11))); // NOI18N
+        jtxtMontIns.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(41, 43, 45)), "MONTO POR INSTALACIÓN", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial", 0, 11))); // NOI18N
         jPanel1.add(jtxtMontIns, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 360, 250, 60));
 
         jbtnConfirmar.setFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
@@ -99,7 +99,7 @@ public class Proyecto_win extends javax.swing.JFrame {
         jtxtABoleta.setFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
         jtxtABoleta.setForeground(new java.awt.Color(0, 0, 255));
         jtxtABoleta.setRows(5);
-        jtxtABoleta.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "BOLETA", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial", 0, 11))); // NOI18N
+        jtxtABoleta.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(41, 43, 45)), "BOLETA", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial", 0, 11))); // NOI18N
         jScrollPane1.setViewportView(jtxtABoleta);
 
         jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 310, 470, 250));
@@ -116,20 +116,20 @@ public class Proyecto_win extends javax.swing.JFrame {
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jtxtNombres.setFont(new java.awt.Font("Arial", 0, 11)); // NOI18N
-        jtxtNombres.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Nombres", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial", 0, 11))); // NOI18N
+        jtxtNombres.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(41, 43, 45)), "Nombres", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial", 0, 11))); // NOI18N
         jPanel2.add(jtxtNombres, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 50, 210, 60));
 
         jtxtApellidos.setFont(new java.awt.Font("Arial", 0, 11)); // NOI18N
-        jtxtApellidos.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Apellidos", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial", 0, 11))); // NOI18N
+        jtxtApellidos.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(41, 43, 45)), "Apellidos", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial", 0, 11))); // NOI18N
         jPanel2.add(jtxtApellidos, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 50, 210, 60));
 
         jtxtDistrito.setFont(new java.awt.Font("Arial", 0, 11)); // NOI18N
         jtxtDistrito.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "--SELECCIONE SU DISTRITO--", "Pueblo Libre", "Surquillo", "San Miguel", "Magdalena del Mar", "Jesús María", "Lince", "Santiago de Surco", "La Molina", "Miraflores", "Chorrillos", "Cercado de Lima", "San Isidro", "Callao", "Breña", "La Molina", "Los Olivos", "San Martin de Porres", "Comas", "San Juan de Lurigancho" }));
-        jtxtDistrito.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Distrito", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial", 0, 11))); // NOI18N
+        jtxtDistrito.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(41, 43, 45)), "Distrito", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial", 0, 11))); // NOI18N
         jPanel2.add(jtxtDistrito, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 190, 190, 60));
 
         jtxtDNI.setFont(new java.awt.Font("Arial", 0, 11)); // NOI18N
-        jtxtDNI.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "DNI", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial", 0, 11))); // NOI18N
+        jtxtDNI.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(41, 43, 45)), "DNI", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial", 0, 11))); // NOI18N
         jtxtDNI.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jtxtDNIActionPerformed(evt);
@@ -138,7 +138,7 @@ public class Proyecto_win extends javax.swing.JFrame {
         jPanel2.add(jtxtDNI, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 120, 150, 60));
 
         jcbxDireccion.setFont(new java.awt.Font("Arial", 0, 11)); // NOI18N
-        jcbxDireccion.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Dirección", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial", 0, 11))); // NOI18N
+        jcbxDireccion.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(41, 43, 45)), "Dirección", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial", 0, 11))); // NOI18N
         jPanel2.add(jcbxDireccion, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 190, 210, 60));
 
         jLabel2.setFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
@@ -160,7 +160,7 @@ public class Proyecto_win extends javax.swing.JFrame {
         jPanel3.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 120, 260, 40));
 
         jcbxPlan.setFont(new java.awt.Font("Arial", 0, 11)); // NOI18N
-        jcbxPlan.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "--SELECCIONE EL PLAN--", "100MB", "200MB", "600MB", "600MB PLUS", "1000MB" }));
+        jcbxPlan.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "--SELECCIONE EL PLAN--", "100 mbps", "200 mbps", "600 mbps", "600 mbps plus", "1000 mbps" }));
         jcbxPlan.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jcbxPlanActionPerformed(evt);
@@ -171,7 +171,7 @@ public class Proyecto_win extends javax.swing.JFrame {
         jPanel4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jtxtNumTarjetaVisa.setFont(new java.awt.Font("Arial", 0, 11)); // NOI18N
-        jtxtNumTarjetaVisa.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Número de la Tarjeta", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial", 0, 11))); // NOI18N
+        jtxtNumTarjetaVisa.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(41, 43, 45)), "Número de la Tarjeta", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial", 0, 11))); // NOI18N
         jtxtNumTarjetaVisa.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jtxtNumTarjetaVisaActionPerformed(evt);
@@ -180,7 +180,7 @@ public class Proyecto_win extends javax.swing.JFrame {
         jPanel4.add(jtxtNumTarjetaVisa, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 220, 60));
 
         jtxtFechaCaduVisa.setFont(new java.awt.Font("Arial", 0, 11)); // NOI18N
-        jtxtFechaCaduVisa.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Fecha de Caducación", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial", 0, 11))); // NOI18N
+        jtxtFechaCaduVisa.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(41, 43, 45)), "Fecha de Caducación", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial", 0, 11))); // NOI18N
         jtxtFechaCaduVisa.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jtxtFechaCaduVisaActionPerformed(evt);
@@ -189,7 +189,7 @@ public class Proyecto_win extends javax.swing.JFrame {
         jPanel4.add(jtxtFechaCaduVisa, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 80, 220, 60));
 
         jtxtCVVVisa.setFont(new java.awt.Font("Arial", 0, 11)); // NOI18N
-        jtxtCVVVisa.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "CVV", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial", 0, 11))); // NOI18N
+        jtxtCVVVisa.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(41, 43, 45)), "CVV", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial", 0, 11))); // NOI18N
         jtxtCVVVisa.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jtxtCVVVisaActionPerformed(evt);
@@ -202,7 +202,7 @@ public class Proyecto_win extends javax.swing.JFrame {
         jPanel5.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jtxtCVVMaster.setFont(new java.awt.Font("Arial", 0, 11)); // NOI18N
-        jtxtCVVMaster.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "CVV", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial", 0, 11))); // NOI18N
+        jtxtCVVMaster.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(41, 43, 45)), "CVV", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial", 0, 11))); // NOI18N
         jtxtCVVMaster.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jtxtCVVMasterActionPerformed(evt);
@@ -211,7 +211,7 @@ public class Proyecto_win extends javax.swing.JFrame {
         jPanel5.add(jtxtCVVMaster, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 150, 220, 60));
 
         jtxtNumTarjetaMaster.setFont(new java.awt.Font("Arial", 0, 11)); // NOI18N
-        jtxtNumTarjetaMaster.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Número de la Tarjeta", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial", 0, 11))); // NOI18N
+        jtxtNumTarjetaMaster.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(41, 43, 45)), "Número de la Tarjeta", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial", 0, 11))); // NOI18N
         jtxtNumTarjetaMaster.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jtxtNumTarjetaMasterActionPerformed(evt);
@@ -220,7 +220,7 @@ public class Proyecto_win extends javax.swing.JFrame {
         jPanel5.add(jtxtNumTarjetaMaster, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 220, 60));
 
         jtxtFechaCasuMaster.setFont(new java.awt.Font("Arial", 0, 11)); // NOI18N
-        jtxtFechaCasuMaster.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Fecha de Caducación", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial", 0, 11))); // NOI18N
+        jtxtFechaCasuMaster.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(41, 43, 45)), "Fecha de Caducación", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial", 0, 11))); // NOI18N
         jtxtFechaCasuMaster.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jtxtFechaCasuMasterActionPerformed(evt);
@@ -283,32 +283,30 @@ public class Proyecto_win extends javax.swing.JFrame {
         cf = new ClienteFiel(Nombres, Apellidos, dni, distrito, direccion, tipocliente, tipoPlan);
         cn = new ClienteNuevo(Nombres, Apellidos, dni, distrito, direccion, tipocliente, tipoPlan);
         if(tipocliente.equals("Fiel")){
-           jtxtABoleta.setText("Boleta de Venta:\n------------------------------------------\nNombres: "+cf.Nombres+"\n");
-           jtxtABoleta.setText("Apellidos: "+cf.Apellidos+"\n");
-           jtxtABoleta.setText("DNI: "+cf.dni+"\n");
-           jtxtABoleta.setText("Distrito: "+cf.distrito+"\n");
-           jtxtABoleta.setText("Dirección: "+cf.direccion+"\n");
-           jtxtABoleta.setText("Tipo de Cliente: "+cf.tipocliente+"\n");
-           jtxtABoleta.setText("Plan: "+cf.tipoPlan+"\n------------------------------------------\n");
-           jtxtABoleta.setText("Monto por instalación: S/ "+cf.CalcularMontoInstalacion()+"\n");
-           jtxtABoleta.setText("Monto Total a Pagar: S/ "+cf.CalcularMontoTotal()+"\n"); 
+           jtxtABoleta.append("Boleta de Venta:\n------------------------------------------\nNombres: "+cf.Nombres+"\n");
+        jtxtABoleta.append("Apellidos: "+cf.Apellidos+"\n");
+        jtxtABoleta.append("DNI: "+cf.dni+"\n");
+        jtxtABoleta.append("Distrito: "+cf.distrito+"\n");
+        jtxtABoleta.append("Dirección: "+cf.direccion+"\n");
+        jtxtABoleta.append("Tipo de Cliente: "+cf.tipocliente+"\n");
+        jtxtABoleta.append("Plan: "+cf.tipoPlan+"\n------------------------------------------\n");
+        jtxtABoleta.append("Monto por instalación: S/ "+cf.CalcularMontoInstalacion()+"\n");
+        jtxtABoleta.append("Monto Total a Pagar: S/ "+cf.CalcularMontoTotal()+"\n");
            jtxtMontIns.setText(Double.toString(cf.CalcularMontoInstalacion()));
            jtxtMontTotal.setText(Double.toString(cf.CalcularMontoTotal()));
         }
         if(tipocliente.equals("Nuevo")){
-           jtxtABoleta.setText("Boleta de Venta:\n------------------------------------------\nNombres: "+cn.Nombres+"\n");
-           jtxtABoleta.setText("Apellidos: "+cn.Apellidos+"\n");
-           jtxtABoleta.setText("DNI: "+cn.dni+"\n");
-           jtxtABoleta.setText("Distrito: "+cn.distrito+"\n");
-           jtxtABoleta.setText("Dirección: "+cn.direccion+"\n");
-           jtxtABoleta.setText("Tipo de Cliente: "+cn.tipocliente+"\n");
-           jtxtABoleta.setText("Plan: "+cn.tipoPlan+"\n------------------------------------------\n");
-           jtxtABoleta.setText("Monto por instalación: S/ "+cn.CalcularMontoInstalacion()+"\n");
-           jtxtABoleta.setText("Monto Total a Pagar: S/ "+cn.CalcularMontoTotal()+"\n"); 
+           jtxtABoleta.append("Boleta de Venta:\n------------------------------------------\nNombres: "+cf.Nombres+"\n");
+        jtxtABoleta.append("Apellidos: "+cn.Apellidos+"\n");
+        jtxtABoleta.append("DNI: "+cn.dni+"\n");
+        jtxtABoleta.append("Distrito: "+cn.distrito+"\n");
+        jtxtABoleta.append("Dirección: "+cn.direccion+"\n");
+        jtxtABoleta.append("Tipo de Cliente: "+cn.tipocliente+"\n");
+        jtxtABoleta.append("Plan: "+cn.tipoPlan+"\n------------------------------------------\n");
+        jtxtABoleta.append("Monto por instalación: S/ "+cn.CalcularMontoInstalacion()+"\n");
+        jtxtABoleta.append("Monto Total a Pagar: S/ "+cn.CalcularMontoTotal()+"\n"); 
            jtxtMontIns.setText(Double.toString(cn.CalcularMontoInstalacion()));
            jtxtMontTotal.setText(Double.toString(cn.CalcularMontoTotal()));
-        }else{
-           JOptionPane.showMessageDialog(null,"Error, Ingrese el tipo de cliente");
         }
     }//GEN-LAST:event_jbtnMostrarActionPerformed
 

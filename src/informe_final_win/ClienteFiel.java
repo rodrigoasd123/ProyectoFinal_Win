@@ -31,7 +31,7 @@ public class ClienteFiel extends Cliente{
            return 99*0.9;
         if(tipoPlan.equals("600 mbps"))
            return 169*0.85;
-        if(tipoPlan.equals("600 mbps Plus"))
+        if(tipoPlan.equals("600 mbps plus"))
            return 259*0.80;
         if(tipoPlan.equals("1000 mbps"))
            return 459*0.75;
