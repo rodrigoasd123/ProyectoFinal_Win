@@ -279,10 +279,10 @@ public class Proyecto_win extends javax.swing.JFrame {
         String tipocliente=jcbxTipoCliente.getSelectedItem().toString();
         String distrito=jtxtDistrito.getSelectedItem().toString();
         String tipoPlan=jcbxPlan.getSelectedItem().toString();
-        
-        
+        //Corregir lo que se muestra en la boleta
+        cf = new ClienteFiel(Nombres, Apellidos, dni, distrito, direccion, tipocliente, tipoPlan);
+        cn = new ClienteNuevo(Nombres, Apellidos, dni, distrito, direccion, tipocliente, tipoPlan);
         if(tipocliente.equals("Fiel")){
-           cf = new ClienteFiel(Nombres, Apellidos, dni, distrito, direccion, tipocliente, tipoPlan);
            jtxtABoleta.setText("Boleta de Venta:\n------------------------------------------\nNombres: "+cf.Nombres+"\n");
            jtxtABoleta.setText("Apellidos: "+cf.Apellidos+"\n");
            jtxtABoleta.setText("DNI: "+cf.dni+"\n");
@@ -296,7 +296,6 @@ public class Proyecto_win extends javax.swing.JFrame {
            jtxtMontTotal.setText(Double.toString(cf.CalcularMontoTotal()));
         }
         if(tipocliente.equals("Nuevo")){
-           cn = new ClienteNuevo(Nombres, Apellidos, dni, distrito, direccion, tipocliente, tipoPlan);
            jtxtABoleta.setText("Boleta de Venta:\n------------------------------------------\nNombres: "+cn.Nombres+"\n");
            jtxtABoleta.setText("Apellidos: "+cn.Apellidos+"\n");
            jtxtABoleta.setText("DNI: "+cn.dni+"\n");
@@ -309,7 +308,7 @@ public class Proyecto_win extends javax.swing.JFrame {
            jtxtMontIns.setText(Double.toString(cn.CalcularMontoInstalacion()));
            jtxtMontTotal.setText(Double.toString(cn.CalcularMontoTotal()));
         }else{
-           JOptionPane.showMessageDialog(null,"ERROR, Ingrese El Tipo de Cliente");
+           JOptionPane.showMessageDialog(null,"Error, Ingrese el tipo de cliente");
         }
     }//GEN-LAST:event_jbtnMostrarActionPerformed
 
@@ -320,6 +319,8 @@ public class Proyecto_win extends javax.swing.JFrame {
     //Boton Confirmar contrato su objetivo es que una vez se mostraron los datos de la boleta se debe mostrar
     //un mensaje que diga que se confirmo el pago
     private void jbtnConfirmarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnConfirmarActionPerformed
+        //Comprobar que se ha ingresado los datos de la tarjeta, si es asi mostrar ese mensaje
+        
         JOptionPane.showMessageDialog(null, "Se ha confirmado exitosamente el pago");    
     }//GEN-LAST:event_jbtnConfirmarActionPerformed
 
@@ -359,6 +360,7 @@ public class Proyecto_win extends javax.swing.JFrame {
         jtxtMontTotal.setText("");
         jcbxDireccion.setText("");
         jtxtDNI.setText("");
+        jtxtNombres.setText("");
         jtxtApellidos.setText("");
         jtxtNumTarjetaVisa.setText("");
         jtxtFechaCaduVisa.setText("");
@@ -366,8 +368,7 @@ public class Proyecto_win extends javax.swing.JFrame {
         jtxtNumTarjetaMaster.setText("");
         jtxtFechaCasuMaster.setText("");
         jtxtCVVMaster.setText("");  
-        jtxtABoleta.setText("");
-        
+        jtxtABoleta.setText("");   
     }//GEN-LAST:event_jbtnIngresarActionPerformed
 
     String PlanesWIN() {
