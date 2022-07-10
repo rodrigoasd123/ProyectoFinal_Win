@@ -1,5 +1,7 @@
 
-    package informe_final_win;
+package informe_final_win;
+
+import javax.swing.JOptionPane;
 
     /*Proyecto de Metodologia de Programacción Grupo 6
       Autores del Proyecto:   
@@ -10,17 +12,17 @@
       - @Andre
     */
 
-    public class Proyecto_win extends javax.swing.JFrame {
+public class Proyecto_win extends javax.swing.JFrame {
     //Aca se inicializan las clases y algunos objetos que usan librerias
-    
+    ClienteFiel cf;
+    ClienteNuevo cn;
     
     public Proyecto_win() {
         initComponents();
         //Inicializador del formulario
         this.setTitle("Formulario de Planes de Fibra Óptica WIN");
         rsscalelabel.RSScaleLabel.setScaleLabel(jlblImagen, "src/Imagenes/win.png");
-        jtxtAPlanes.setText(PlanesWIN());
-        
+        jtxtAPlanes.setText(PlanesWIN()); 
     }
     
     @SuppressWarnings("unchecked")
@@ -270,8 +272,45 @@
 
     //Boton para Mostrar (Su objetivo es mostrar los datos de la boleta) y tambien los jtxt MontoTotal y MontoTransacciön 
     private void jbtnMostrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnMostrarActionPerformed
-  
+        String Nombres=jtxtNombres.getText();
+        String Apellidos=jtxtApellidos.getText();
+        String direccion=jcbxDireccion.getText();
+        String dni=jtxtDNI.getText();
+        String tipocliente=jcbxTipoCliente.getSelectedItem().toString();
+        String distrito=jtxtDistrito.getSelectedItem().toString();
+        String tipoPlan=jcbxPlan.getSelectedItem().toString();
         
+        
+        if(tipocliente.equals("Fiel")){
+           cf = new ClienteFiel(Nombres, Apellidos, dni, distrito, direccion, tipocliente, tipoPlan);
+           jtxtABoleta.setText("Boleta de Venta:\n------------------------------------------\nNombres: "+cf.Nombres+"\n");
+           jtxtABoleta.setText("Apellidos: "+cf.Apellidos+"\n");
+           jtxtABoleta.setText("DNI: "+cf.dni+"\n");
+           jtxtABoleta.setText("Distrito: "+cf.distrito+"\n");
+           jtxtABoleta.setText("Dirección: "+cf.direccion+"\n");
+           jtxtABoleta.setText("Tipo de Cliente: "+cf.tipocliente+"\n");
+           jtxtABoleta.setText("Plan: "+cf.tipoPlan+"\n------------------------------------------\n");
+           jtxtABoleta.setText("Monto por instalación: S/ "+cf.CalcularMontoInstalacion()+"\n");
+           jtxtABoleta.setText("Monto Total a Pagar: S/ "+cf.CalcularMontoTotal()+"\n"); 
+           jtxtMontIns.setText(Double.toString(cf.CalcularMontoInstalacion()));
+           jtxtMontTotal.setText(Double.toString(cf.CalcularMontoTotal()));
+        }
+        if(tipocliente.equals("Nuevo")){
+           cn = new ClienteNuevo(Nombres, Apellidos, dni, distrito, direccion, tipocliente, tipoPlan);
+           jtxtABoleta.setText("Boleta de Venta:\n------------------------------------------\nNombres: "+cn.Nombres+"\n");
+           jtxtABoleta.setText("Apellidos: "+cn.Apellidos+"\n");
+           jtxtABoleta.setText("DNI: "+cn.dni+"\n");
+           jtxtABoleta.setText("Distrito: "+cn.distrito+"\n");
+           jtxtABoleta.setText("Dirección: "+cn.direccion+"\n");
+           jtxtABoleta.setText("Tipo de Cliente: "+cn.tipocliente+"\n");
+           jtxtABoleta.setText("Plan: "+cn.tipoPlan+"\n------------------------------------------\n");
+           jtxtABoleta.setText("Monto por instalación: S/ "+cn.CalcularMontoInstalacion()+"\n");
+           jtxtABoleta.setText("Monto Total a Pagar: S/ "+cn.CalcularMontoTotal()+"\n"); 
+           jtxtMontIns.setText(Double.toString(cn.CalcularMontoInstalacion()));
+           jtxtMontTotal.setText(Double.toString(cn.CalcularMontoTotal()));
+        }else{
+           JOptionPane.showMessageDialog(null,"ERROR, Ingrese El Tipo de Cliente");
+        }
     }//GEN-LAST:event_jbtnMostrarActionPerformed
 
     private void jcbxPlanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jcbxPlanActionPerformed
@@ -281,14 +320,12 @@
     //Boton Confirmar contrato su objetivo es que una vez se mostraron los datos de la boleta se debe mostrar
     //un mensaje que diga que se confirmo el pago
     private void jbtnConfirmarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnConfirmarActionPerformed
-    
-        
+        JOptionPane.showMessageDialog(null, "Se ha confirmado exitosamente el pago");    
     }//GEN-LAST:event_jbtnConfirmarActionPerformed
 
     //Boton Cerrar su objetivo es cerrar el formulario 
     private void jbtnCerrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnCerrarActionPerformed
- 
-        
+        System.exit(0);      
     }//GEN-LAST:event_jbtnCerrarActionPerformed
 
     private void jtxtNumTarjetaVisaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtxtNumTarjetaVisaActionPerformed
@@ -314,7 +351,22 @@
     //Boton Ingresar nuevos datos su objetivo es borrar los datos de entrada para ingresar nuevos datos, requestfocus() 
     //a Nombres
     private void jbtnIngresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnIngresarActionPerformed
-  
+        jcbxPlan.setSelectedIndex(0);
+        jcbxTipoCliente.setSelectedIndex(0);
+        jtxtDistrito.setSelectedIndex(0);
+        jtxtABoleta.setText("");
+        jtxtMontIns.setText("");
+        jtxtMontTotal.setText("");
+        jcbxDireccion.setText("");
+        jtxtDNI.setText("");
+        jtxtApellidos.setText("");
+        jtxtNumTarjetaVisa.setText("");
+        jtxtFechaCaduVisa.setText("");
+        jtxtCVVVisa.setText("");
+        jtxtNumTarjetaMaster.setText("");
+        jtxtFechaCasuMaster.setText("");
+        jtxtCVVMaster.setText("");  
+        jtxtABoleta.setText("");
         
     }//GEN-LAST:event_jbtnIngresarActionPerformed
 

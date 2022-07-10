@@ -35,7 +35,7 @@ public class ClienteFiel extends Cliente{
            return 259*0.80;
         if(tipoPlan.equals("1000 mbps"))
            return 459*0.75;
-        return 0;
+        else return 0;
     }
 
     @Override
@@ -44,3 +44,4 @@ public class ClienteFiel extends Cliente{
     }
             
 }
+
