@@ -7,9 +7,9 @@
       Implementar metodos adicionales si se necesitan hacer operaciones (pueden ser del tipo funcion o procedimiento).
       Para usar los atributos de la clase usar el getNombreAtributo() ya que estos son variables privadas.
     */
-
+    
     public class ClienteNuevo extends Cliente{
-
+    
         
         
     //Puse los metodos para que no salga error, tu trabajo es editarlos    
