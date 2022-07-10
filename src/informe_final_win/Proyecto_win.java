@@ -1,6 +1,7 @@
 
 package informe_final_win;
 
+import java.text.DecimalFormat;
 import javax.swing.JOptionPane;
 
     /*Proyecto de Metodologia de Programacción Grupo 6
@@ -16,6 +17,7 @@ public class Proyecto_win extends javax.swing.JFrame {
     //Aca se inicializan las clases y algunos objetos que usan librerias
     ClienteFiel cf;
     ClienteNuevo cn;
+    DecimalFormat df;
     
     public Proyecto_win() {
         initComponents();
@@ -23,6 +25,7 @@ public class Proyecto_win extends javax.swing.JFrame {
         this.setTitle("Formulario de Planes de Fibra Óptica WIN");
         rsscalelabel.RSScaleLabel.setScaleLabel(jlblImagen, "src/Imagenes/win.png");
         jtxtAPlanes.setText(PlanesWIN()); 
+        df = new DecimalFormat("##0.00");
     }
     
     @SuppressWarnings("unchecked")
@@ -308,8 +311,11 @@ public class Proyecto_win extends javax.swing.JFrame {
            jtxtMontIns.setText(Double.toString(cn.CalcularMontoInstalacion()));
            jtxtMontTotal.setText(Double.toString(cn.CalcularMontoTotal()));
         }
+         if(tipocliente.equals("--SELECCIONE EL TIPO DE CLIENTE--")){
+           JOptionPane.showMessageDialog(null, "Error, Seleccione el Tipo de Cliente");
     }//GEN-LAST:event_jbtnMostrarActionPerformed
 // xD
+    }
     private void jcbxPlanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jcbxPlanActionPerformed
 
     }//GEN-LAST:event_jcbxPlanActionPerformed
@@ -319,7 +325,18 @@ public class Proyecto_win extends javax.swing.JFrame {
     private void jbtnConfirmarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnConfirmarActionPerformed
         //Comprobar que se ha ingresado los datos de la tarjeta, si es asi mostrar ese mensaje
         
-        JOptionPane.showMessageDialog(null, "Se ha confirmado exitosamente el pago");    
+               String numtarjetavisa = jtxtNumTarjetaVisa.getText();
+        String fechadecaduvisa = jtxtFechaCaduVisa.getText();
+        String cvvvisa = jtxtCVVVisa.getText();
+        String numtarjetamaster = jtxtNumTarjetaMaster.getText();
+        String fechadecadumaster = jtxtFechaCasuMaster.getText();
+        String cvvmaster = jtxtCVVMaster.getText();
+        if(numtarjetavisa.equals("") && fechadecaduvisa.equals("") && cvvvisa.equals("") 
+          && numtarjetamaster.equals("") && fechadecadumaster.equals("") && cvvmaster.equals("") ){
+            JOptionPane.showMessageDialog(null, "Error, Ingrese los datos de la tarjeta de crédito");
+        }else{
+            JOptionPane.showMessageDialog(null, "Se ha confirmado exitosamente el pago"); 
+        }       
     }//GEN-LAST:event_jbtnConfirmarActionPerformed
 
     //Boton Cerrar su objetivo es cerrar el formulario 
