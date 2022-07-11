@@ -295,8 +295,8 @@ public class Proyecto_win extends javax.swing.JFrame {
               jtxtABoleta.append("Plan: "+cf.tipoPlan+"\n------------------------------------------\n");
               jtxtABoleta.append("Monto por instalación: S/ "+df.format(cf.CalcularMontoInstalacion())+"\n");
               jtxtABoleta.append("Monto Total a Pagar: S/ "+df.format(cf.CalcularMontoTotal())+"\n");
-              jtxtMontIns.setText("S/"+df.format(Double.toString(cf.CalcularMontoInstalacion())));
-              jtxtMontTotal.setText("S/"+df.format(Double.toString(cf.CalcularMontoTotal())));
+              jtxtMontIns.setText("S/"+Double.toString(cf.CalcularMontoInstalacion()));
+              jtxtMontTotal.setText("S/"+Double.toString(cf.CalcularMontoTotal()));
            }
            if(tipocliente.equals("Nuevo")){
               jtxtABoleta.append("Boleta de Venta:\n------------------------------------------\nNombres: "+cf.Nombres+"\n");
@@ -308,8 +308,8 @@ public class Proyecto_win extends javax.swing.JFrame {
               jtxtABoleta.append("Plan: "+cn.tipoPlan+"\n------------------------------------------\n");
               jtxtABoleta.append("Monto por instalación: S/ "+df.format(cn.CalcularMontoInstalacion())+"\n");
               jtxtABoleta.append("Monto Total a Pagar: S/ "+df.format(cn.CalcularMontoTotal())+"\n"); 
-              jtxtMontIns.setText("S/"+df.format(Double.toString(cn.CalcularMontoInstalacion())));
-              jtxtMontTotal.setText("S/"+df.format(Double.toString(cn.CalcularMontoTotal())));
+              jtxtMontIns.setText("S/"+Double.toString(cn.CalcularMontoInstalacion()));
+              jtxtMontTotal.setText("S/"+Double.toString(cn.CalcularMontoTotal()));
            }
            if(tipocliente.equals("--SELECCIONE EL TIPO DE CLIENTE--")){
               JOptionPane.showMessageDialog(null, "Error, Seleccione el Tipo de Cliente");
