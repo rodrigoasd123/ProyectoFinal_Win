@@ -293,8 +293,8 @@ public class Proyecto_win extends javax.swing.JFrame {
               jtxtABoleta.append("Dirección: "+cf.direccion+"\n");
               jtxtABoleta.append("Tipo de Cliente: "+cf.tipocliente+"\n");
               jtxtABoleta.append("Plan: "+cf.tipoPlan+"\n------------------------------------------\n");
-              jtxtABoleta.append("Monto por instalación: S/ "+cf.CalcularMontoInstalacion()+"\n");
-              jtxtABoleta.append("Monto Total a Pagar: S/ "+cf.CalcularMontoTotal()+"\n");
+              jtxtABoleta.append("Monto por instalación: S/ "+df.format(cf.CalcularMontoInstalacion())+"\n");
+              jtxtABoleta.append("Monto Total a Pagar: S/ "+df.format(cf.CalcularMontoTotal())+"\n");
               jtxtMontIns.setText("S/"+Double.toString(cf.CalcularMontoInstalacion()));
               jtxtMontTotal.setText("S/"+Double.toString(cf.CalcularMontoTotal()));
            }
@@ -306,8 +306,8 @@ public class Proyecto_win extends javax.swing.JFrame {
               jtxtABoleta.append("Dirección: "+cn.direccion+"\n");
               jtxtABoleta.append("Tipo de Cliente: "+cn.tipocliente+"\n");
               jtxtABoleta.append("Plan: "+cn.tipoPlan+"\n------------------------------------------\n");
-              jtxtABoleta.append("Monto por instalación: S/ "+cn.CalcularMontoInstalacion()+"\n");
-              jtxtABoleta.append("Monto Total a Pagar: S/ "+cn.CalcularMontoTotal()+"\n"); 
+              jtxtABoleta.append("Monto por instalación: S/ "+df.format(cn.CalcularMontoInstalacion())+"\n");
+              jtxtABoleta.append("Monto Total a Pagar: S/ "+df.format(cn.CalcularMontoTotal())+"\n"); 
               jtxtMontIns.setText("S/"+Double.toString(cn.CalcularMontoInstalacion()));
               jtxtMontTotal.setText("S/"+Double.toString(cn.CalcularMontoTotal()));
            }
