@@ -379,6 +379,7 @@ public class Proyecto_win extends javax.swing.JFrame {
         jtxtFechaCasuMaster.setText("");
         jtxtCVVMaster.setText("");  
         jtxtABoleta.setText("");   
+        jtxtNombres.requestFocus();
     }//GEN-LAST:event_jbtnIngresarActionPerformed
 
     String PlanesWIN() {
